@@ -1,0 +1,16 @@
+.hastadiv{
+    position: relative;
+}
+.hasta3{
+    position: absolute;
+    /* position: relative; */
+    top: 25%;
+    left: 60%;
+   
+}
+.delete-icon{
+    position: absolute;
+    top: 5%;
+    left: 97%;
+
+}

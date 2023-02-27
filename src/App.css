@@ -1,0 +1,14 @@
+.doktor-div{
+    width: 200px;
+}
+.doktor-resim{
+    height: 150px;
+    width: 198px;
+}
+.cursor-pointer{
+    cursor: pointer;
+}
+.anasayfa{
+    margin-top:1rem ;
+    width: 100%;
+}
