@@ -1,6 +1,5 @@
 import React from "react";
 import { useState } from "react";
-import HastaListesi from "./HastaListesi";
 import dataDoktor from "../helpers/dataDoktor";
 
 
