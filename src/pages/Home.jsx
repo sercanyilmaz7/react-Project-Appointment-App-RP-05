@@ -8,10 +8,16 @@ import Doktorlar from "../components/Doktorlar";
 
 const Home = () => {
   //   console.log(dataDoktor);
-  const [hastaLİstesiData, sethastaLİstesiData] = useState(dataHasta);
-  const [secilenDoktor
-    , setsecilenDoktor
-] = useState(dataDoktor)
+  console.log(dataHasta)
+  const [hastaListesiData, sethastaListesiData] = useState(dataHasta);
+  // const [hastaListesiData, sethastaListesiData] = useState(JSON.parse(localStorage.getItem("hastaListesiData") || dataHasta )
+  // );
+
+  // useEffect(() => {
+  //   localStorage.setItem("hastaListesiData", JSON.stringify(hastaListesiData));
+  // }, [hastaListesiData]);
+
+  const [secilenDoktor, setsecilenDoktor] = useState(dataDoktor);
   const [show, setShow] = useState(true);
 
   return (
@@ -31,8 +37,8 @@ const Home = () => {
             <HastaEkle
               show={show}
               setShow={setShow}
-              hastaLİstesiData={hastaLİstesiData}
-              sethastaLİstesiData={sethastaLİstesiData}
+              hastaListesiData={hastaListesiData}
+              sethastaListesiData={sethastaListesiData}
               secilenDoktor={secilenDoktor}
               setsecilenDoktor={setsecilenDoktor}
             />
@@ -42,14 +48,14 @@ const Home = () => {
         {/* <div></div> */}
 
         <div className=" d-flex justify-content-start align-items-end flex-column col-10">
-          {hastaLİstesiData.map((hasta, index) => {
+          {hastaListesiData.map((hasta, index) => {
             return (
               <HastaListesi
                 key={index}
                 hasta={hasta}
                 secilenDoktor={secilenDoktor}
-                hastaLİstesiData={hastaLİstesiData}
-                sethastaLİstesiData={sethastaLİstesiData}
+                hastaListesiData={hastaListesiData}
+                sethastaListesiData={sethastaListesiData}
               />
             );
           })}

@@ -6,15 +6,15 @@ import { MdDeleteSweep } from "react-icons/md";
 const HastaListesi = ({
   hasta,
   secilenDoktor,
-  hastaLİstesiData,
-  sethastaLİstesiData,
+  hastaListesiData,
+  sethastaListesiData,
 }) => {
   const [hastaOk, setHastaOk] = useState("");
   const { id, text, day, doktor, bittiMi } = hasta;
 
   const handleDelete = () => {
-    sethastaLİstesiData(
-      (hastaLİstesiData = hastaLİstesiData.filter((i) => {
+    sethastaListesiData(
+      (hastaListesiData = hastaListesiData.filter((i) => {
         return i.id !== id;
       }))
     );
@@ -22,8 +22,8 @@ const HastaListesi = ({
 
   const handleOk = () => {
     setHastaOk(!hastaOk);
-    sethastaLİstesiData(
-      hastaLİstesiData.map((i) => {
+    sethastaListesiData(
+      hastaListesiData.map((i) => {
         return i.id === id ? { ...i, bittiMi: !i.bittiMi } : i;
       })
     );

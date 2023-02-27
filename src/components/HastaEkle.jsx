@@ -3,10 +3,10 @@ import { useState } from "react";
 import dataDoktor from "../helpers/dataDoktor";
 
 
-const HastaEkle = ({ hastaLİstesiData,sethastaLİstesiData,show,setShow,secilenDoktor,setsecilenDoktor }) => {
+const HastaEkle = ({ hastaListesiData,sethastaListesiData,show,setShow,secilenDoktor,setsecilenDoktor }) => {
 //   console.log(dataHasta);
 //   const [hastaLİstesiData, sethastaLİstesiData] = useState(dataHasta);
-  console.log(hastaLİstesiData);
+  console.log(hastaListesiData);
   const [hasta, setHasta] = useState("");
   const [day, setDay] = useState("");
   //   console.log(hasta)
@@ -14,13 +14,13 @@ const HastaEkle = ({ hastaLİstesiData,sethastaLİstesiData,show,setShow,secilen
   const handleSubmit = (e) => {
     e.preventDefault();
     const yeniHasta = {
-      id: hastaLİstesiData.length + 1,
+      id: hastaListesiData.length + 1,
       bittimi: false,
       text: hasta,
       day: day,
       doktor: secilenDoktor[0].doktor,
     };
-    sethastaLİstesiData([yeniHasta,...hastaLİstesiData ]);
+    sethastaListesiData([yeniHasta,...hastaListesiData ]);
   };
 
   return (
