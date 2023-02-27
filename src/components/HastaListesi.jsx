@@ -46,7 +46,9 @@ const HastaListesi = ({
           <h4 className="text">{text}</h4>
           <p className="day">{day}</p>
           <h3 className="hasta-doktor">{doktor}</h3>
-          <h3 className="hasta3">Hasta ile ilgilenildi</h3>
+          <h3 className="hasta3">
+            {bittiMi ? "Hasta ile ilgilenildi" : "Hasta Beklemede"}
+          </h3>
           <MdDeleteSweep onClick={handleDelete} className="delete-icon h4" />
         </div>
       ) : (
@@ -62,7 +64,9 @@ const HastaListesi = ({
             <h4 className="text">{text}</h4>
             <p className="day">{day}</p>
             <h3 className="hasta-doktor">{doktor}</h3>
-            <h3 className="hasta3">Hasta ile ilgilenildi</h3>
+            <h3 className="hasta3">
+              {bittiMi ? "Hasta ile ilgilenildi" : "Hasta Beklemede"}
+            </h3>
             <MdDeleteSweep className="delete-icon h4" />
           </div>
         )
