@@ -21,6 +21,8 @@ const HastaEkle = ({ hastaListesiData,sethastaListesiData,show,setShow,secilenDo
       doktor: secilenDoktor[0].doktor,
     };
     sethastaListesiData([yeniHasta,...hastaListesiData ]);
+    setHasta("");
+    setDay("")
   };
 
   return (
