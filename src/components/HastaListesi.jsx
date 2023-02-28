@@ -67,7 +67,7 @@ const HastaListesi = ({
             <h3 className="hasta3">
               {bittiMi ? "Hasta ile ilgilenildi" : "Hasta Beklemede"}
             </h3>
-            <MdDeleteSweep className="delete-icon h4" />
+            <MdDeleteSweep onClick={handleDelete} className="delete-icon h4" />
           </div>
         )
       )}

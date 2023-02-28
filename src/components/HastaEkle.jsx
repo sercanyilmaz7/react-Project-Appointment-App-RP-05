@@ -35,6 +35,7 @@ const HastaEkle = ({ hastaListesiData,sethastaListesiData,show,setShow,secilenDo
             className="form-control"
             id="exampleInputEmail1"
             aria-describedby="emailHelp"
+            required
           />
         </div>
         <div className="mb-3">
@@ -44,6 +45,7 @@ const HastaEkle = ({ hastaListesiData,sethastaListesiData,show,setShow,secilenDo
             value={day}
             onChange={(e) => setDay(e.target.value)}
             className="form-control"
+            required
           />
         </div>
         <button type="submit" className="btn btn-primary">
