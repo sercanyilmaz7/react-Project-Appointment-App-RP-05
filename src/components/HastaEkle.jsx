@@ -41,7 +41,7 @@ const HastaEkle = ({ hastaListesiData,sethastaListesiData,show,setShow,secilenDo
         <div className="mb-3">
           <label className="form-label">Date & Time</label>
           <input
-            type="date"
+            type="datetime-local"
             value={day}
             onChange={(e) => setDay(e.target.value)}
             className="form-control"
@@ -49,7 +49,7 @@ const HastaEkle = ({ hastaListesiData,sethastaListesiData,show,setShow,secilenDo
           />
         </div>
         <button type="submit" className="btn btn-primary">
-          {(secilenDoktor[0].doktor).toUpperCase()} İÇİN KAYIT OLUŞTUR
+          {secilenDoktor[0].doktor.toUpperCase()} İÇİN KAYIT OLUŞTUR
         </button>
         <button
           className="btn anasayfa btn-warning"
